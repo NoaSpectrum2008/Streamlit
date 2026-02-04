@@ -8,5 +8,5 @@ l = s.slider("Lengte (m)", 0.5, 2.5)
 
 bmi = g / (l ** 2)
 bmi = round(bmi, 1)
-s.write(bmi)
+s.write(f"De BMI van {g} KG en {l} M is {bmi}")
 
