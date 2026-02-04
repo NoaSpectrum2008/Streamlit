@@ -1,18 +1,21 @@
 import streamlit as s
 import math as m
 
-#Titel
+# Titel
 s.title("Mijn Eerste Streamlit App")
 
-#Tekst
-s.write("Welkom, bereken hier je bmi")
+# Tekst
+s.write("Welkom, bereken hier je BMI")
 
-#Slider
-x = s.slider("Kies een getal", 0, 100)
-g = s.slider("Hoeveel weeg je (in kg)? ", 0, 120)
-l = s.slider("Hoe groot ben je (in cm)? ", 0, 220)
+# Sliders
+g = s.slider("Hoeveel weeg je (in kg)?", 1, 120)
+l_cm = s.slider("Hoe groot ben je (in cm)?", 50, 220)
 
+# Omrekenen naar meters
+l = l_cm / 100
 
-#Output
-bmi = g / (l**2)
-s.write(f"De BMI van {g} KG en een grootte van {h} cm is {bmi}")
+# Berekening
+bmi = g / (l ** 2)
+
+# Output
+s.write(f"De BMI bij {g} kg en een lengte van {l_cm} cm is **{bmi:.2f}**")
