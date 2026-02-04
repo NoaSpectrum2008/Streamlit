@@ -9,7 +9,7 @@ s.write("Welkom, bereken hier je BMI")
 
 # Sliders
 g = s.slider("Hoeveel weeg je (in kg)?", 1, 120)
-l_cm = s.slider("Hoe groot ben je (in cm)?", 50, 220)
+l_cm = s.slider("Hoe groot ben je (in cm)?", 20, 230)
 
 # Omrekenen naar meters
 l = l_cm / 100
